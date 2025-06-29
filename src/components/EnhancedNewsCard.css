@@ -1,0 +1,35 @@
+@keyframes popIn {
+  0% {
+    transform: scale(0.96);
+    box-shadow: none;
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    opacity: 1;
+  }
+}
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.96);
+    box-shadow: none;
+    opacity: 0.7;
+  }
+}
+.news-pop-in {
+  animation: popIn 0.6s cubic-bezier(.22,1,.36,1) both;
+}
+.news-pop-out {
+  animation: popOut 0.5s cubic-bezier(.22,1,.36,1) both;
+} 

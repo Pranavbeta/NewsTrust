@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animated Infinity Symbol for NewsTrust Title */
+.infinity-wrapper {
+  animation: floatY 2.5s ease-in-out infinite;
+}
+.infinity-svg path {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 0;
+  animation: rainbow-stroke 3s linear infinite;
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes rainbow-stroke {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 180; }
+}
+
+.shield-animate {
+  animation: floatY 2.5s ease-in-out infinite;
+}
+
+.ticker-tape {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: ticker 18s linear infinite;
+}
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.card-force-white-text, .card-force-white-text * {
+  color: #fff !important;
+}
