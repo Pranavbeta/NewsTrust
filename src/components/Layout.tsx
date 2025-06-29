@@ -326,6 +326,16 @@ const Layout: React.FC<Props> = ({ children, onAuthClick }) => {
                   </Link>
                 );
               })}
+              {/* Add Sign In button for mobile if not logged in */}
+              {!user && (
+                <button
+                  onClick={() => { setMobileMenuOpen(false); onAuthClick(); }}
+                  disabled={loading}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-md text-base font-medium transition-colors disabled:opacity-50 mt-4"
+                >
+                  {loading ? 'Loading...' : t('auth.signin', 'Sign In')}
+                </button>
+              )}
             </nav>
           </div>
         </div>

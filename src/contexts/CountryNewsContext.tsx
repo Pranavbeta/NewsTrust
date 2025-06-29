@@ -97,12 +97,12 @@ export const CountryNewsProvider: React.FC<{ children: React.ReactNode }> = ({ c
     }
   };
 
-  // Refresh when country or language changes
+  // 1. Fetch articles when country changes
   useEffect(() => {
     refreshNews();
   }, [selectedCountry.code]);
 
-  // Re-translate when language or articles change
+  // 2. Translate articles when language changes or after fetching new articles
   useEffect(() => {
     if (
       articles.length > 0 &&
@@ -265,7 +265,7 @@ export const CountryNewsProvider: React.FC<{ children: React.ReactNode }> = ({ c
       }));
       setArticles(originalArticles);
     }
-  }, [articles, currentLanguage.code, needsTranslation]);
+  }, [currentLanguage.code, needsTranslation]);
 
 
   return (

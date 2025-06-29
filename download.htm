@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><!--remix-island-start--><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta property="og:type" content="object"/><meta property="og:site_name" content="bolt.new"/><meta property="og:title" content="bolt.new"/><meta property="og:image" content="https://bolt.new/static/social_preview_index.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="bolt.new"/><meta name="twitter:description" content="Prompt, run, edit &amp; deploy apps"/><meta name="twitter:image" content="https://bolt.new/static/social_preview_index.jpg"/><meta name="twitter:site" content="@StackBlitz"/><meta name="bolt-version" content="f70ce9c"/><link rel="stylesheet" href="/assets/root-ueMCRf17.css"/><link rel="stylesheet" href="/assets/LightRays-apN2LHcc.css"/><link rel="icon" href="/static/favicon.svg" type="image/svg+xml"/><link rel="stylesheet" href="/assets/ReactToastify-Bh76j7cs.css"/><link rel="stylesheet" href="/assets/tailwind-compat-Bwh-BmjE.css"/><link rel="stylesheet" href="/assets/index-qg0Nrwsa.css"/><link rel="stylesheet" href="/assets/xterm-LZoznX6r.css"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"/><link rel="stylesheet" href="/assets/_index-CJwaLhME.css"/><script>(function createWorkaroundGlobal() {
+  window["__name"] = () => {
+  };
+})();</script><script>(function blockDOMMutations() {
+  const observer = new MutationObserver((mutations) => {
+    observer.disconnect();
+    mutations.reverse().forEach((mutation) => {
+      if (mutation.type === "childList") {
+        mutation.addedNodes.forEach((node2) => {
+          if ([document.head, document.body, document.documentElement].includes(node2.parentNode)) {
+            return;
+          }
+          if (node2.parentNode) {
+            node2.parentNode.removeChild(node2);
+          }
+        });
+        mutation.removedNodes.forEach((node2) => {
+          if (mutation.previousSibling) {
+            mutation.target.insertBefore(node2, mutation.previousSibling.nextSibling);
+          } else if (mutation.target) {
+            mutation.target.appendChild(node2);
+          }
+        });
+      }
+      if (mutation.type === "attributes") {
+        const { target, attributeName, oldValue } = mutation;
+        if (attributeName) {
+          if (oldValue === null) {
+            target.removeAttribute(attributeName);
+          } else {
+            target.setAttribute(attributeName, oldValue);
+          }
+        }
+      }
+      if (mutation.type === "characterData") {
+        mutation.target.data = mutation.oldValue ?? "";
+      }
+    });
+    observe();
+  });
+  function observe() {
+    observer.observe(document, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeOldValue: true,
+      characterData: true,
+      characterDataOldValue: true
+    });
+  }
+  __name(observe, "observe");
+  window.addEventListener("DOMContentLoaded", observe);
+  window.__allowDOMMutations = () => {
+    observer.disconnect();
+  };
+})();</script><script>(function themeCode(storageKey, defaultTheme) {
+  if (window.location.pathname !== "/figma") {
+    setBoltTheme();
+  }
+  function setBoltTheme() {
+    const htmlElement = document.querySelector("html");
+    const localTheme = localStorage.getItem(storageKey);
+    const metaElement = document.querySelector("meta[name=bolt-theme]");
+    let theme = metaElement?.content ?? localTheme ?? defaultTheme;
+    htmlElement.setAttribute("data-theme-option", theme);
+    if (theme === "system") {
+      const prefersDark2 = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      theme = prefersDark2 ? "dark" : "light";
+    }
+    htmlElement.setAttribute("data-theme", theme);
+  }
+  __name(setBoltTheme, "setBoltTheme");
+})("bolt_theme", "dark");</script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-58KJM59B');</script><script>(function sentryLoader(environment) {
+  window.sentryOnLoad = () => {
+    Sentry.init({
+      release: "f70ce9cfb14af0cecb6aeb1861bc6ad8902061b7",
+      // https://docs.sentry.io/platforms/javascript/session-replay/
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1,
+      tracesSampleRate: 0.1,
+      environment
+    });
+  };
+})("production");</script><script src="https://js.sentry-cdn.com/a2f02ffb9d5f16260f262b40e72c0efe.min.js" crossorigin="anonymous"></script><!--remix-island-end--></head><body><div id="root" class="w-full h-full"><div class="flex flex-col h-full w-full bg-bolt-elements-background-depth-1"><header class="flex shrink-0 select-none selection-accent items-center pl-5 pr-4 border-b h-[var(--header-height)] z-10 bg-transparent border-transparent"><div class="flex grow-1 basis-60 items-center gap-2 z-logo text-bolt-elements-textPrimary"><a href="/" class="text-2xl font-semibold text-accent flex items-center"><span class="i-bolt:logos-bolt?mask w-[46px] inline-block"></span></a></div><div class="flex grow-1 basis-60 justify-end items-center gap-3"></div></header><div class="_BaseChat_1dk13_1 relative flex h-full w-full overflow-hidden bg-bolt-elements-background-depth-1" data-chat-visible="true"><div class="fixed overflow-hidden inset-0 animate-in fade-in-80"><div class="relative h-full" style="background:radial-gradient(ellipse 120% 100% at top, rgb(237 166 114 / 58%), rgba(47, 142, 236, 0.30) 50%, rgba(47, 142, 236, 0) 90%)"></div></div><div class="flex overflow-auto size-full flex-col relative"><div class="_Chat_1dk13_5 selection-accent flex flex-col flex-grow"><div class="flex flex-col mt-[22vh] mx-[var(--chat-padding)]"><h1 class="text-[44px] text-center font-semibold text-bolt-elements-textPrimary tracking-tight">Bolt is <i class="italic inline-block mr-1">free</i> all weekend</h1><p class="mb-6 text-center text-bolt-elements-textSecondary">Build apps and sites in chat. Start now.<!-- --> <a href="https://bolt.new/getstarted" class="underline" target="_blank">Learn more</a></p></div><div class=""><div class="relative px-[var(--chat-padding)] w-full max-w-chat mx-auto z-prompt"><div class="relative shadow-xs rounded-[0.375rem] p-[1px] overflow-clip"><div class="absolute inset-0 bg-bolt-elements-prompt-border -z-1"></div><div class="_PromptContainer_uo1ly_1 absolute top-0 left-0 right-0 h-[136px] rounded-[calc(0.375rem-1px)] -z-1"></div><div class="absolute top-0 left-[10px] h-px w-[100px] bg-gradient-to-r from-transparent/0 via-[#FFEA62] to-accent-300/0 mix-blend-overlay"></div><div class="bg-bolt-elements-prompt-background rounded-[calc(0.375rem-1px)]"><div class="border-b-px border-transparent"></div><div class="relative select-none"><textarea class="w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-bolt-elements-textPrimary placeholder-bolt-elements-textTertiary bg-transparent text-sm" style="min-height:76px;max-height:200px" placeholder="Type your idea and we’ll bring it to life" translate="no"></textarea></div><div class="flex justify-between text-sm p-4 pt-2"><div class="flex gap-1 items-center"><input type="file" aria-hidden="true" tabindex="-1" style="display:none;visibility:hidden" accept=".jpg,.jpeg,.png,.gif,.webp,.svg,.pdf,.txt,.doc,.docx,.py,.ipynb,.js,.mjs,.cjs,.jsx,.html,.css,.scss,.sass,.ts,.tsx,.java,.cs,.php,.c,.cc,.cpp,.cxx,.h,.hh,.hpp,.rs,.swift,.go,.rb,.kt,.kts,.scala,.sh,.bash,.zsh,.bat,.csv,.log,.ini,.cfg,.config,.json,.yaml,.yml,.toml,.lua,.sql,.md,.tex,.latex,.asm,.ino,.s" multiple=""/><button class="flex items-center text-bolt-elements-item-contentDefault bg-transparent rounded-md disabled:cursor-not-allowed enabled:hover:text-bolt-elements-item-contentActive enabled:hover:bg-bolt-elements-item-backgroundActive p-1" aria-label="Upload files" data-state="closed"><div class="i-ph:link-simple text-xl"></div></button><button class="flex items-center text-bolt-elements-item-contentDefault bg-transparent rounded-md disabled:cursor-not-allowed enabled:hover:text-bolt-elements-item-contentActive enabled:hover:bg-bolt-elements-item-backgroundActive p-1 opacity-30" disabled="" data-state="closed"><div class="i-bolt:stars text-xl"></div></button></div><div class="flex items-center gap-3"></div></div></div></div><div class="pb-[var(--chat-padding)]"></div></div></div></div><footer class="flex flex-wrap gap-3 ml-auto pl-10 pb-2 pt-32 px-4 items-center justify-center text-sm text-bolt-elements-textSecondary"><button class="bg-transparent hover:text-bolt-elements-textPrimary transition-theme">Pricing</button><a href="/blog" target="_blank" class="font-medium hover:text-bolt-elements-textPrimary transition-theme">Blog</a><a href="https://support.bolt.new" target="_blank" class="font-medium hover:text-bolt-elements-textPrimary transition-theme">Documentation</a><a href="https://support.bolt.new" target="_blank" class="font-medium hover:text-bolt-elements-textPrimary transition-theme">Help Center</a><span class="dot"></span><a href="https://stackblitz.com/careers" target="_blank" class="font-medium hover:text-bolt-elements-textPrimary transition-theme">Careers</a><a href="https://stackblitz.com/terms-of-service" target="_blank" class="font-medium hover:text-bolt-elements-textPrimary transition-theme">Terms</a><a href="https://stackblitz.com/privacy-policy" target="_blank" class="font-medium hover:text-bolt-elements-textPrimary transition-theme">Privacy</a><a href="https://stackblitz.com" class="_StackBlitzLogo_1dk13_23 hover:text-bolt-elements-textPrimary transition-theme" target="_blank"></a></footer></div></div></div><script>((STORAGE_KEY2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key2 = Math.random().toString(32).slice(2);
+      window.history.replaceState({
+        key: key2
+      }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(STORAGE_KEY2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error3) {
+      console.error(error3);
+      sessionStorage.removeItem(STORAGE_KEY2);
+    }
+  })("positions", null);
+</script>
+<link rel="modulepreload" href="/assets/manifest-3aad0dde.js"/>
+<link rel="modulepreload" href="/assets/entry.client-Bd4bBzZJ.js"/>
+<link rel="modulepreload" href="/assets/components-DwxDXfvw.js"/>
+<link rel="modulepreload" href="/assets/appsignal.client-D7dUzQiz.js"/>
+<link rel="modulepreload" href="/assets/constants-DVsswbow.js"/>
+<link rel="modulepreload" href="/assets/LightRays.client-BQEcP16t.js"/>
+<link rel="modulepreload" href="/assets/projects-CPvY4Ieo.js"/>
+<link rel="modulepreload" href="/assets/Alert-BKlgpOt2.js"/>
+<link rel="modulepreload" href="/assets/login-XbOYy40j.js"/>
+<link rel="modulepreload" href="/assets/tslib.es6-ChmJQI-w.js"/>
+<link rel="modulepreload" href="/assets/LoadingDots-BEV9J_Du.js"/>
+<link rel="modulepreload" href="/assets/description-BSJj6DzP.js"/>
+<link rel="modulepreload" href="/assets/token-BJHQCCBs.js"/>
+<link rel="modulepreload" href="/assets/github-B4DPigDh.js"/>
+<link rel="modulepreload" href="/assets/useProjectVisibility-BodqbwqA.js"/>
+<link rel="modulepreload" href="/assets/root-CLLkz6TU.js"/>
+<link rel="modulepreload" href="/assets/_index-CzG8U-Ft.js"/>
+<link rel="modulepreload" href="/assets/animationVariants-vXMxn8wN.js"/>
+<link rel="modulepreload" href="/assets/stripe-C9FtXd3F.js"/>
+<link rel="modulepreload" href="/assets/client-error-BxEoa1nZ.js"/>
+<link rel="modulepreload" href="/assets/ConnectToFigmaDialog-CqQwQqVH.js"/>
+<link rel="modulepreload" href="/assets/index-BbP3371Q.js"/>
+<link rel="modulepreload" href="/assets/overlay-IvLw2I8T.js"/>
+<link rel="modulepreload" href="/assets/client-github-DT72vr_V.js"/>
+<link rel="modulepreload" href="/assets/prepare-body-BhrVD9IA.js"/>
+<link rel="modulepreload" href="/assets/_index-BN9WqcX3.js"/>
+<script>
+window.__remixContext = {"basename":"/","future":{"v3_fetcherPersist":true,"v3_relativeSplatPath":true,"v3_throwAbortReason":true,"v3_singleFetch":false,"v3_lazyRouteDiscovery":false,"unstable_optimizeDeps":false},"isSpaMode":false,"state":{"loaderData":{"root":{},"routes/_index":{"loggedIn":true,"user":{"avatar":"https://avatars.githubusercontent.com/u/105533894","bio":null,"canSubscribe":true,"createdAt":"2023-12-03T11:23:17.664Z","email":"upadhyaypranav89@gmail.com","expirableBoltTokenPurchases":[],"externalAccount":{"username":"Pranavbeta","url":"https://github.com//Pranavbeta"},"externalAccounts":[{"provider":"stripe","username":null,"uri":null},{"provider":"github","username":"Pranavbeta","uri":"https://github.com//Pranavbeta"}],"featureFlags":{"experimentalNode":false,"previewTunneling":false,"hackathon":true,"teamOnboarding":false,"userSurvey":true,"newPricingCards":false,"refreshSubscriptionData":false},"kind":"USER","location":null,"membership":{"nextInterval":null,"nextTier":null,"paid":true,"subscription":{"currentMonthStart":"2025-06-13","currentMonthStartTimestamp":1749842584000,"currentPeriodEnd":1752434584000,"currentPeriodStart":1749842584000,"freeTrial":false,"interval":"monthly","nextMonthStart":"2025-07-13","nextMonthStartTimestamp":1752434584000,"pendingUpdate":null,"planCost":2000,"quantity":1,"status":"active"},"tier":1,"updateSubscriptionFlowVersion":"v1"},"membershipLevel":1,"name":"Pranav_Upadhyay","nextMembershipLevel":0,"onboardingSurveyResponse":{"status":"finished","surveyVersion":null},"roles":["hackathon_2025"],"site":"","teamsPlan":false,"tokenAllocations":[{"event":"migrate","expiresAt":"2025-08-13T19:23:04.000Z","id":552207,"kind":"recurring","label":null,"organizationId":null,"startsAt":"2025-06-13T19:23:04.000Z","tokens":10000000}],"totalBoltTokenPurchases":1000000,"username":"Pranavbeta","wcAPIMembership":null,"wcAPIStripeAccount":null,"id":"919166","organizations":[],"organizationInvites":[],"activeOrganizationId":null,"surveys":{"onboarding":"finished"},"settings":{"featurePreviews":{}}},"tokenStats":{"billingPeriod":{"from":1749842584000,"to":1752434584000},"maxPerDay":10000000,"maxPerMonth":10000000,"nextTier":{"level":2,"limits":{"perDay":26000000,"perMonth":26000000},"type":"pro"},"overflow":{"available":1000000,"used":1000000},"purchased":{"available":1000000,"used":1000000},"totalThisMonth":10000000,"totalToday":0,"referralTokens":{"free":{"available":0,"rewardCount":0,"used":0},"paid":{"available":0,"rewardCount":0,"used":0}},"specialTokens":{"available":20000000,"used":0}}}},"actionData":null,"errors":null}};
+</script>
+<script type="module" async>
+import "/assets/manifest-3aad0dde.js";
+import * as route0 from "/assets/root-CLLkz6TU.js";
+import * as route1 from "/assets/_index-BN9WqcX3.js";
+
+window.__remixRouteModules = {"root":route0,"routes/_index":route1};
+
+import("/assets/entry.client-Bd4bBzZJ.js");</script></div></body></html>

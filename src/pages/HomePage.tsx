@@ -2,12 +2,14 @@ import React, { useMemo } from 'react';
 import { RefreshCw, Filter, Zap, TrendingUp } from 'lucide-react';
 import { useNews } from '../contexts/NewsContext';
 import { useAuth } from '../contexts/AuthContext';
+import { useTheme } from '../contexts/ThemeContext';
 import EnhancedNewsCard from '../components/EnhancedNewsCard';
 import CategoryTabs from '../components/CategoryTabs';
 
 const HomePage: React.FC = () => {
   const { articles, selectedCategory, loading, refreshNews } = useNews();
   const { user } = useAuth();
+  const { actualTheme } = useTheme();
 
   const filteredArticles = useMemo(() => {
     if (selectedCategory === 'all') return articles;
@@ -43,6 +45,23 @@ const HomePage: React.FC = () => {
       {/* Category Tabs */}
       <div className="-mx-2 sm:mx-0">
         <CategoryTabs />
+      </div>
+
+      {/* Bolt Badge - just below title and navbar */}
+      <div className="flex justify-center my-2">
+        <a
+          href="https://bolt.new"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Powered by Bolt"
+        >
+          <img
+            src={actualTheme === 'dark' ? '/white_circle_360x360.png' : '/black_circle_360x360.png'}
+            alt="Bolt Badge"
+            className="h-16 w-16 sm:h-20 sm:w-20 rounded-full shadow-md border border-gray-200 dark:border-gray-700 transition-all hover:scale-105 hover:shadow-lg cursor-pointer"
+            style={{ objectFit: 'cover' }}
+          />
+        </a>
       </div>
 
       {/* News Feed */}
